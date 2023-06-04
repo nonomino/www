@@ -1,0 +1,10 @@
+title: nonomino - A Developer
+email: nonomino@duck.com
+description: A developer with a keen eye for awesome stuff.
+baseurl: ""
+url: ""
+twitter_username: nonominox
+github_username:  nonomino
+theme: jekyll-theme-so-simple
+plugins:
+  - jekyll-feed
