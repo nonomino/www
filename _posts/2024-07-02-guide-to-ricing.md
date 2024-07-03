@@ -4,7 +4,7 @@ title:  "A guide to ricing *nix"
 date:   2024-07-02 21:30:00 +0530
 categories: post
 ---
-Hi there, are you bored of your default, personality-less workflow and desktop, fear no more, here I will simplify the process of **ricing** your setup to your heart's content.
+Are you bored of your default, personality-less workflow and desktop, fear no more, here I will simplify the process of **ricing** your setup to your heart's content.
 
 Ricing is the process of customizing and optimizing the visual aesthetic and functionality of your Linux desktop environment. This guide will cover the basics of ricing, including the essential components and tools you need to get started.
 
