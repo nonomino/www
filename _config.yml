@@ -1,4 +1,4 @@
-skin: "/assets/css/skins/default.css"
+skin: "/assets/css/skins/light.css"
 locale: en-US
 title: "nonomino"
 description: "This site may or may not guide you to life, the universe and everything."
@@ -7,21 +7,13 @@ url: "https://nonomino.is-a.dev"
 logo: /images/avatar.jpg
 date_format: "%B %-d, %Y"
 read_time: true
-words_per_minute: 200
-mathjax:
-  enable:
-  combo:
-  tags:
+words_per_minute: 140
+mathjax: false
 google_fonts:
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
   - name: "Comfortaa"
     weights: "400,400i,700,700i"
-google_analytics: 
-disqus:
-  shortname: 
-twitter:
-  username: "nonominox"
 
 liquid:
   error_mode: strict
@@ -31,7 +23,7 @@ markdown: kramdown
 feed:
   path: atom.xml
 
-search_full_content: false 
+search_full_content: true 
 
 plugins:
   - jekyll-seo-tag
@@ -51,22 +43,17 @@ author:
   name: nonomino
   picture: /images/avatar.jpg
   email: nonomino@perso.be
-  twitter: nonominox
-  links:
-    - title:
-      url:
-      icon:
 
 footer_links:
   - title: email
     url: mailto:nonomino@perso.be
-    icon: fas fa-envelope
+    icon: iconoir-send-mail
   - title: Linkedin
-    url: https://likedin.com/in/nonominos
-    icon: fab fa-linkedin
+    url: https://likedin.com/in/nonomino
+    icon: iconoir-linkedin
   - title: GitHub
     url: https://github.com/nonomino
-    icon: fab fa-github-square
+    icon: iconoir-github
   - title: Feed
     url: atom.xml
-    icon: fas fa-rss-square
+    icon: iconoir-rss-feed-tag
