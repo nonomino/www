@@ -9,11 +9,6 @@ date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 140
 mathjax: false
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Comfortaa"
-    weights: "400,400i,700,700i"
 
 liquid:
   error_mode: strict
@@ -47,13 +42,13 @@ author:
 footer_links:
   - title: email
     url: mailto:nonomino@perso.be
-    icon: iconoir-send-mail
+    icon: icon mail-out
   - title: Linkedin
     url: https://likedin.com/in/nonomino
-    icon: iconoir-linkedin
+    icon: icon linkedin
   - title: GitHub
     url: https://github.com/nonomino
-    icon: iconoir-github
+    icon: icon github
   - title: Feed
     url: atom.xml
-    icon: iconoir-rss-feed-tag
+    icon: icon rss

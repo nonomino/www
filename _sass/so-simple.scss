@@ -5,6 +5,11 @@
  * https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
 */
 
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/comfortaa-latin.woff2") format('woff2');
+}
+
 @import "so-simple/functions";
 @import "so-simple/variables";
 @import "so-simple/mixins";
