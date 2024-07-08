@@ -1,3 +1,13 @@
+#menu-toggle {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+#menu-toggle:focus,
+#menu-toggle:active {
+  outline: none;
+}
+
 ::-moz-selection {
   color: #FBF1C7;
   background: #9D0006;

@@ -1,17 +1,11 @@
-$(document).ready(function() {
-  // main menu toggle
+document.addEventListener("DOMContentLoaded", function() {
   var toggleButton = document.getElementById("menu-toggle");
   var menu = document.getElementById("primary-nav");
 
   if (toggleButton && menu) {
-    toggleButton.addEventListener("click", function() {
+    toggleButton.addEventListener("click", function(event) {
+      event.preventDefault();
       menu.classList.toggle("js-menu-is-open");
     });
   }
-
-  // initialize smooth scroll
-  $("a").smoothScroll({ offset: -20 });
-
-  // add lightbox class to all image links
-  $("a[href$='.jpg'], a[href$='.png'], a[href$='.gif']").attr("data-lity", "");
 });
