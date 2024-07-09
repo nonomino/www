@@ -1,14 +1,12 @@
-- title: 🏠Home
+- title: /
   url: /
-- title: 😎About
-  url: /about
-- title: 🔍Search
-  url: /search
-- title: 📄Portfolio
+- title: /me
+  url: /me
+- title: /portfolio
   url: /portfolio
-- title: 📚Blog
-  url: /posts/
-- title: 🏷Tags
-  url: /tags/
-- title: 🖱Uses
+- title: /blog
+  url: /posts
+- title: /now
+  url: /now
+- title: /uses
   url: /uses

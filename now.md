@@ -1,6 +1,6 @@
 ---
 layout: page
-title: uses
-permalink: /uses
+title: now
+permalink: /now
 sitemap: true
 ---

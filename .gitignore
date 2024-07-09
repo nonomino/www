@@ -10,5 +10,6 @@ _site
 *.sublime-workspace
 codekit-config.json
 Gemfile.lock
+*.lock
 node_modules
 npm-debug.log*

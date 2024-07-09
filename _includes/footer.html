@@ -15,11 +15,8 @@
   {%- endif -%}
 
   <div class="copyright">
-    {% if site.copyright %}
-      {{ site.copyright | markdownify }}
-    {% else %}
       <p><b> 🄯 </b> {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a></p>
-      <p><a href="credits">CREDITS</a> ● <a href="license">LICENSE</a></p>
-    {% endif %}
+      <p><a href="credits">CREDITS</a> ● <a href="license">LICENSE</a> ● <a href="https://github.com/nonomino/sos.git">SAUCE</a></p>
+      <p><i>{{site.author.motto}}</i></p>
   </div>
 </footer>

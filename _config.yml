@@ -8,7 +8,16 @@ logo: /images/avatar.jpg
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 140
+exclude: ["Gemfile.lock"]
+verbose: false
 mathjax: false
+search_full_content: true
+
+author:
+  name: nonomino
+  picture: /images/avatar.jpg
+  email: nonomino@perso.be
+  motto: inveniam viam aut faciam
 
 liquid:
   error_mode: strict
@@ -18,7 +27,15 @@ markdown: kramdown
 feed:
   path: atom.xml
 
-search_full_content: true 
+kramdown:
+  auto_ids          : true
+  entity_output     : as_char
+  toc_levels        : [1, 2, 3, 4, 5, 6]
+  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  input             : GFM
+  hard_wrap         : false
+  footnote_nr       : 1
+  show_warnings     : false
 
 plugins:
   - jekyll-seo-tag
@@ -33,11 +50,6 @@ defaults:
     values:
       layout: post
       share: true
-
-author:
-  name: nonomino
-  picture: /images/avatar.jpg
-  email: nonomino@perso.be
 
 footer_links:
   - title: email

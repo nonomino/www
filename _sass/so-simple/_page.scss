@@ -2,11 +2,12 @@
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 1em;
   max-width: $main-sidebar-max-width;
 }
 
 .page-title {
-  @include fluid-type($min-vw, $max-vw, 48px, 60px);
+  @include fluid-type($min-vw, $max-vw, 30px, 40px);
   margin-bottom: 0.5em;
   font-family: $title-font-family;
   font-weight: $page-title-weight;
