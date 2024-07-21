@@ -25,6 +25,12 @@
   &.mail-out {
     background-image: url('icons/send-mail.svg');
   }
+  
+  &.duolingo {
+  	height: 2.2em;
+  	width: 2.2em;
+    background-image: url('icons/duolingo.svg');
+  }
 }
 
 svg {

@@ -7,7 +7,7 @@ url: "https://nonomino.is-a.dev"
 logo: /images/avatar.jpg
 date_format: "%B %-d, %Y"
 read_time: true
-words_per_minute: 140
+words_per_minute: 150
 exclude: ["Gemfile.lock"]
 verbose: false
 mathjax: false
@@ -61,6 +61,9 @@ footer_links:
   - title: GitHub
     url: https://github.com/nonomino
     icon: icon github
+  - title: Duolingo
+    url: https://duolingo.com/profile/nonominox
+    icon: icon duolingo
   - title: Feed
     url: atom.xml
     icon: icon rss

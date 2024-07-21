@@ -14,6 +14,20 @@
 }
 
 /*
+slideIn animation
+*/
+@keyframes slideIn {
+  from {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*
    Fade-in animation .fadeIn
    ========================================================================== */
 
@@ -96,4 +110,28 @@
 .drop {
   -webkit-animation-name: drop;
   animation-name: drop;
+}
+
+/*
+   float animation .float-anim
+   ========================================================================== */
+
+@keyframes float-anim {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(15px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.float-anim {
+  -webkit-animation-name: float-anim;
+  animation-name: float-anim;
 }

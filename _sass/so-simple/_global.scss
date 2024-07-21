@@ -1,13 +1,3 @@
-#menu-toggle {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-#menu-toggle:focus,
-#menu-toggle:active {
-  outline: none;
-}
-
 ::-moz-selection {
   color: #FBF1C7;
   background: #9D0006;
@@ -34,6 +24,8 @@
 }
 
 #menu-toggle {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   display: block;
   margin: 0;
   padding: 0.25em 0.75em 0.5em;
@@ -46,6 +38,11 @@
   }
 }
 
+#menu-toggle:focus,
+#menu-toggle:active {
+  outline: none;
+}
+
 .site-nav {
   display: none;
   margin-bottom: 1em;
@@ -56,6 +53,7 @@
     margin: 0;
     padding: 0.25em 0.75em;
     list-style: none;
+    animation: slideIn 0.5s ease-out;
     border-radius: 0 0 (2 * $border-radius) (2 * $border-radius);
 
     @include breakpoint($medium) {
@@ -85,6 +83,7 @@
     display: block;
     -webkit-animation-name: initial;
     animation-name: initial;
+    transition: opacity 2s;
   }
 }
 
@@ -125,6 +124,9 @@
   border: 5px solid red;
   border-color: #D79921;
   border-radius: $site-logo-width;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float-anim 6s ease-in-out infinite;
 
   @include breakpoint($medium) {
     width: 1.5 * $site-logo-width;
