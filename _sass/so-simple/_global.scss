@@ -71,8 +71,6 @@
     padding: 0.5em 0.75em;
     text-transform: lowercase;
     text-decoration: none;
-    border: 1px solid;
-    border-radius: $border-radius;
   }
 
   @include breakpoint($medium) {
@@ -121,8 +119,6 @@
 .site-logo-img {
   width: $site-logo-width;
   height: $site-logo-height;
-  border: 5px solid red;
-  border-color: #D79921;
   border-radius: $site-logo-width;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
   transform: translatey(0px);

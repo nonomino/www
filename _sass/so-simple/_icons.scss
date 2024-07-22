@@ -10,6 +10,14 @@
   background-size: contain;
   background-repeat: no-repeat;
 
+  &.lamp-off {
+    background-image: url('icons/dark.svg');
+  }
+
+  &.lamp-on {
+    background-image: url('icons/light.svg');
+  }
+
   &.rss {
     background-image: url('icons/rss-feed-tag.svg');
   }
