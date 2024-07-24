@@ -4,7 +4,7 @@ title: "nonomino"
 description: "This site may or may not guide you to life, the universe and everything."
 baseurl:
 url: "https://nonomino.is-a.dev"
-logo: /images/avatar.jpg
+logo: /assets/images/avatar.jpg
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 150
