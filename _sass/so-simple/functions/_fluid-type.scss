@@ -1,7 +1,4 @@
-/* ==========================================================================
-   Fluid Type
-   as seen on https://madebymike.com.au/writing/fluid-type-calc-examples/
-   ========================================================================== */
+/// https://madebymike.com.au/writing/fluid-type-calc-examples/
 
 @function strip-unit($value) {
   @if type-of($value) == 'number' and unitless($value) {

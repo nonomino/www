@@ -15,9 +15,9 @@ search_full_content: true
 
 author:
   name: nonomino
-  picture: /images/avatar.jpg
+  picture: /assets/images/avatar.jpg
   email: nonomino@perso.be
-  motto: inveniam viam aut faciam
+  motto: here be dragons
 
 liquid:
   error_mode: strict

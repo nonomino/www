@@ -1,13 +1,4 @@
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
-
-/*
-   Default button
-   ========================================================================== */
-
 .btn {
-  /* default */
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
@@ -38,7 +29,6 @@
     }
   }
 
-  /* disabled */
   &--disabled {
     pointer-events: none;
     cursor: not-allowed;
@@ -47,17 +37,14 @@
     opacity: 0.65;
   }
 
-  /* extra large button */
   &--x-large {
     font-size: 2rem;
   }
 
-  /* large button */
   &--large {
     font-size: 1.5rem;
   }
 
-  /* small button */
   &--small {
     font-size: 0.75rem;
   }

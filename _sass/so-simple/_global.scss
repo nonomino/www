@@ -12,8 +12,10 @@
   margin-bottom: 1em;
   font-family: $description-font-family;
   @include fluid-type($min-vw, $max-vw, $h5-min, $h5-max);
-  font-weight: 300;
-  font-style: bold;
+  & {
+    font-weight: 300;
+    font-style: bold;
+  }
 }
 .skip-links {
   ul {
@@ -87,15 +89,20 @@
 
 .masthead {
   @include clearfix;
-  margin-bottom: 3em;
-  text-align: center;
+  & {
+    margin-bottom: 3em;
+    text-align: center;
+  }
 }
 
 .site-title {
   margin: 0.5em 0 0;
   padding: 0;
   @include fluid-type($min-vw, $max-vw, $h2-min, $h2-max);
-  font-weight: 700;
+
+  & {
+    font-weight: 700;
+  }
 
   a {
     text-decoration: none;
@@ -106,8 +113,11 @@
   margin-bottom: 1em;
   font-family: $description-font-family;
   @include fluid-type($min-vw, $max-vw, $h5-min, $h5-max);
-  font-weight: 300;
-  font-style: italic;
+
+  & {
+    font-weight: 300;
+    font-style: italic;
+  }
 }
 
 .site-logo {
@@ -139,10 +149,13 @@
 
 .site-footer {
   @include clearfix();
-  margin: 2em 0;
-  padding: 2em 0;
-  text-align: center;
-  border-top: 1px solid;
+
+  & {
+    margin: 2em 0;
+    padding: 2em 0;
+    text-align: center;
+    border-top: 1px solid;
+  }
 
   .social-icons {
     margin-bottom: 0.5em;
@@ -198,8 +211,10 @@
 
 .taxonomy-title {
   @include fluid-type($min-vw, $max-vw, 28px, 32px);
-  margin-bottom: 0.5em;
-  font-family: $base-font-family;
+  & {
+    margin-bottom: 0.5em;
+    font-family: $base-font-family;
+  }
 }
 
 .taxonomy-index {
