@@ -6,6 +6,7 @@ baseurl:
 url: "https://nonomino.is-a.dev"
 logo: /assets/images/avatar.jpg
 date_format: "%B %-d, %Y"
+sitemap: true
 read_time: true
 words_per_minute: 150
 exclude: ["Gemfile.lock"]
@@ -18,6 +19,11 @@ author:
   picture: /assets/images/avatar.jpg
   email: nonomino@perso.be
   motto: here be dragons
+
+sass:
+  style: compressed
+  sass_dir: _sass
+  sourcemap: never
 
 liquid:
   error_mode: strict
