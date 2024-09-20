@@ -7,14 +7,13 @@ sitemap: true
 
 > "I am not what happened to me. I am what I choose to become."
 >
->  \- Carl Jung, some dead dude
+>  \- Carl Jung, 
 
-Hi there! I'm Anas, and I try do things that make me and those me around happy.  
-Things that make me happy include good code, a nice lunch, a long nap, and most of all: good people. My end goal in life is ~~World Domina~~ to live in a bookshop, maybe in [Paris](https://www.shakespeareandcompany.com/history), not worry about trivial things such as money and focus on what really matters in the end.  
+Welcome to my cozy corner of the internet!
 
-This site exists because I believe in the indie web and because I wanted a place on the Internet that I could call truly "my own".  
+Professionally, I'm a freshly baked software developer, just beginning to wrap my head around the intricacies of the field. My interests span backend development, Linux, programming language design, and similar areas, basically, all the stuff that sounds impressive at parties but leaves most people scratching their heads.
 
-I am passionate about creating software, but have a tendency to break stuff often as I tend to tinker too much. Nevertheless, I have learnt a lot in the past few years.
+Unprofessionally, I’m your standard-issue nerd. I spend my free time tinkering with projects that range from “could be useful” to “why did I build this again?” I also have a habit of getting lost in fiction—often more than I intend—and dabbling in long-forgotten languages like Old Norse, because nothing says fun like reviving ancient grammar rules!
 
 #### facts about me
 
