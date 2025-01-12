@@ -2,6 +2,9 @@
    Base elements
    ========================================================================== */
 
+
+@use "sass:color";
+
 body {
   color: $text-color;
   background: $background-color;
@@ -32,18 +35,18 @@ blockquote {
 }
 
 .copyright {
-  color: lighten($text-color, 25%);
+  color: color.adjust($text-color, $lightness: 25%)
   a {
-    color: lighten($text-color, 25%);
+    color: color.adjust($text-color, $lightness: 25%)
   }
 }
 
 .taxonomy-title {
-  color: lighten($text-color, 60%);
+  color: color.adjust($text-color, $lightness: 25%)
 }
 
 .taxonomy-count {
-  color: lighten($text-color, 50%);
+  color: color.adjust($text-color, $lightness: 25%)
 }
 
 .taxonomy-index {
@@ -63,7 +66,7 @@ blockquote {
 }
 
 .back-to-top {
-  color: lighten($text-color, 50%);
+  color: color.adjust($text-color, $lightness: 25%)
 }
 
 .site-nav {
@@ -187,7 +190,7 @@ td {
 
 /* Default notice */
 .notice {
-  @include notice(lighten($base-color, 90%));
+  @include notice(color.adjust($base-color, $lightness: 25%));
 }
 
 /* Accent notice */
