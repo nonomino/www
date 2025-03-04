@@ -5,41 +5,26 @@
  * https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
 */
 
-@font-face {
-  font-family: "Comfortaa";
-  src: url("fonts/comfortaa-latin.woff2") format('woff2');
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("fonts/comfortaa-latin-ext.woff2") format('woff2');
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("fonts/comfortaa-greek.woff2") format('woff2');
-}
-
-@import "so-simple/functions";
-@import "so-simple/variables";
-@import "so-simple/mixins";
-@import "so-simple/vendor/breakpoint/breakpoint";
+@use "so-simple/functions";
+@use "so-simple/variables";
+@use "so-simple/mixins";
+@use "so-simple/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
 
 /* Core Styles */
-@import "so-simple/reset";
-@import "so-simple/base";
-@import "so-simple/tables";
+@use "so-simple/reset";
+@use "so-simple/base";
+@use "so-simple/tables";
 
 /* Components */
-@import "so-simple/global";
-@import "so-simple/page";
-@import "so-simple/author";
-@import "so-simple/entries";
-@import "so-simple/buttons";
-@import "so-simple/icons";
-@import "so-simple/notices";
-@import "so-simple/syntax-highlighting";
+@use "so-simple/global";
+@use "so-simple/page";
+@use "so-simple/author";
+@use "so-simple/entries";
+@use "so-simple/buttons";
+@use "so-simple/icons";
+@use "so-simple/notices";
+@use "so-simple/syntax-highlighting";
 
 /* Utility Clases */
-@import "so-simple/utilities";
+@use "so-simple/utilities";

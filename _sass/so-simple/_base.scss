@@ -1,3 +1,20 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/comfortaa-latin.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/comfortaa-latin-ext.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/comfortaa-greek.woff2") format('woff2');
+}
+
 html {
   scroll-behavior: smooth;
   @include fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size);
