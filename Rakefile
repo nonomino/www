@@ -4,7 +4,7 @@ require 'rake/tasklib'
 # --- Configuration ---
 
 JEKYLL_CONFIG_FILES = ENV['JEKYLL_CONFIG'] || 'Config.toml'
-JEKYLL_SOURCE_DIR   = ENV['JEKYLL_SOURCE'] || 'src'
+JEKYLL_SOURCE_DIR   = ENV['JEKYLL_SOURCE'] || '.'
 JEKYLL_DEST_DIR     = ENV['JEKYLL_DESTINATION'] || '_site'
 
 # --- Helper Methods ---

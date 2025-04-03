@@ -1,15 +1,15 @@
 # Locations
-source              = "src"
-destination         = "./_site"
+source              = "."
+destination         = "_site"
 collections_dir     = "content"
-plugins_dir         = "_plugins"
-layouts_dir         = "_layouts"
-data_dir            = "_data"
-includes_dir        = "_includes"
+plugins_dir         = "src/_plugins"
+layouts_dir         = "src/_layouts"
+data_dir            = "src/_data"
+includes_dir        = "src/_includes"
 
 # Reading
 safe                = false
-include             = [ ".htaccess" ]
+include             = [ ".htaccess"]
 exclude             = ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files          = [ ".git", ".svn" ]
 encoding            = "utf-8"
@@ -22,8 +22,8 @@ future              = false
 unpublished         = false
 
 # Plugins
-whitelist           = [ ]
-plugins             = [ ]
+whitelist           = []
+plugins             = []
 
 # Conversion
 markdown            = "kramdown"
@@ -45,22 +45,24 @@ permalink           = "date"
 paginate_path       = "/page:num"
 quiet               = false
 verbose             = false
-defaults            = [ ]
+defaults            = []
 
 # Sass
 [sass]
 sass_dir            = "_sass"
-sass_dir            = "_sass"
+style               = "expanded"
+verbose             = true
+sourcemap           = "never"
 
 [collections.blog]
-source              = "content/_blog"
+source              = "/content/_blog/"
 output              = true
 permalink           = "/blog/:title"
 
 [collections.essay]
-source              = "content/_essay"
+source              = "/content/_essay/"
 output              = true
-permalink           = "/essays/:short_title"
+permalink           = "/essays/:title"
 
 [liquid]
 error_mode          = "warn"
