@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ lang | default: 'en' }}" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="robots" content="index, follow">
+		<meta name="description" content="{{ description }}">
+		<meta name="keywords" content="{{ keywords }}">
+		<meta property="og:title" content="{{ title }}">
+		<meta property="og:description" content="{{ description }}">
+		<meta property="og:image" content="{{ image }}">
+		<meta property="og:url" content="{{ url }}">
+		<meta property="og:type" content="website">
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="icon" type="image/png" href="/favicon.png">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="manifest" href="/manifest.json">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="content">
+			{{ content }}
+		</main>
+		<footer>
+			<p>© 2025 nonomino</p>
+		</footer>
+		<script src="/assets/js/index.js" defer></script>
+	</body>
+</html>

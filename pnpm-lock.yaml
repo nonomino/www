@@ -7,11 +7,13 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@11ty/eleventy':
         specifier: ^3.0.0
         version: 3.0.0
-    devDependencies:
+      '@shopify/prettier-plugin-liquid':
+        specifier: ^1.9.0
+        version: 1.9.0(prettier@3.5.3)
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
@@ -238,6 +240,14 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@shopify/liquid-html-parser@2.7.0':
+    resolution: {integrity: sha512-DIkG3cs9vpIRpbaoU/Bv1TNnGXKiJTdCuJeiJlGhADcF4Ic4Da6ZsLI+/z1CoNn/fS59z0wOI/p2NsFWr6XJ8w==}
+
+  '@shopify/prettier-plugin-liquid@1.9.0':
+    resolution: {integrity: sha512-79y7ZgaZcTTe9ODQN7QYnqZvj1BlaRt5wyxr4U6uYPaOPoTjRPLpvLkvnFUv9XoiPSlYwECk00vQCsYjPcO1nQ==}
+    peerDependencies:
+      prettier: ^2.0.0 || ^3.0.0
 
   '@sindresorhus/slugify@2.2.1':
     resolution: {integrity: sha512-MkngSCRZ8JdSOCHRaYd+D01XhvU3Hjy6MGl06zhOk614hp9EOAp5gIkBeQg7wtmxpitU6eAL4kdiRMcJa2dlrw==}
@@ -519,6 +529,9 @@ packages:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
 
+  html-styles@1.0.0:
+    resolution: {integrity: sha512-cDl5dcj73oI4Hy0DSUNh54CAwslNLJRCCoO+RNkVo+sBrjA/0+7E/xzvj3zH/GxbbBLGJhE0hBe1eg+0FINC6w==}
+
   htmlparser2@7.2.0:
     resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==}
 
@@ -569,12 +582,19 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
 
+  isarray@1.0.0:
+    resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
+
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
   iso-639-1@3.1.5:
     resolution: {integrity: sha512-gXkz5+KN7HrG0Q5UGqSMO2qB9AsbEeyLP54kF1YrMsIxmu+g4BdB7rflReZTSTZGpfj8wywu6pfPBCylPIzGQA==}
     engines: {node: '>=6.0'}
+
+  isobject@2.1.0:
+    resolution: {integrity: sha512-+OUdGJlgjOBZDfxnDjYYG6zp487z0JGNQq3cYQYg5f5hKR+syHMsaztzGeml/4kGG55CSpKSpWTY+jYGgsHLgA==}
+    engines: {node: '>=0.10.0'}
 
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
@@ -602,6 +622,9 @@ packages:
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+
+  line-column@1.0.2:
+    resolution: {integrity: sha512-Ktrjk5noGYlHsVnYWh62FLVs4hTb8A3e+vucNZMgPeAOITdshMSgv4cCZQeRDjm7+goqmo6+liZwTXo+U3sVww==}
 
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
@@ -708,6 +731,10 @@ packages:
     peerDependenciesMeta:
       chokidar:
         optional: true
+
+  ohm-js@16.6.0:
+    resolution: {integrity: sha512-X9P4koSGa7swgVQ0gt71UCYtkAQGOjciJPJAz74kDxWt8nXbH5HrDOQG6qBDH7SR40ktNv4x61BwpTDE9q4lRA==}
+    engines: {node: '>=0.12.1'}
 
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
@@ -1138,6 +1165,17 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
+  '@shopify/liquid-html-parser@2.7.0':
+    dependencies:
+      line-column: 1.0.2
+      ohm-js: 16.6.0
+
+  '@shopify/prettier-plugin-liquid@1.9.0(prettier@3.5.3)':
+    dependencies:
+      '@shopify/liquid-html-parser': 2.7.0
+      html-styles: 1.0.0
+      prettier: 3.5.3
+
   '@sindresorhus/slugify@2.2.1':
     dependencies:
       '@sindresorhus/transliterate': 1.6.0
@@ -1423,6 +1461,8 @@ snapshots:
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
 
+  html-styles@1.0.0: {}
+
   htmlparser2@7.2.0:
     dependencies:
       domelementtype: 2.3.0
@@ -1469,9 +1509,15 @@ snapshots:
 
   is-number@7.0.0: {}
 
+  isarray@1.0.0: {}
+
   isexe@2.0.0: {}
 
   iso-639-1@3.1.5: {}
+
+  isobject@2.1.0:
+    dependencies:
+      isarray: 1.0.0
 
   jackspeak@3.4.3:
     dependencies:
@@ -1497,6 +1543,11 @@ snapshots:
   kind-of@6.0.3: {}
 
   kleur@4.1.5: {}
+
+  line-column@1.0.2:
+    dependencies:
+      isarray: 1.0.0
+      isobject: 2.1.0
 
   linkify-it@5.0.0:
     dependencies:
@@ -1588,6 +1639,8 @@ snapshots:
       commander: 5.1.0
     optionalDependencies:
       chokidar: 3.6.0
+
+  ohm-js@16.6.0: {}
 
   on-finished@2.4.1:
     dependencies:

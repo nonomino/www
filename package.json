@@ -7,7 +7,10 @@
 	},
 	"packageManager": "pnpm@10.7.1",
 	"pnpm": {
-		"patchedDependencies": {}
+		"patchedDependencies": {},
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	},
 	"browserslist": [
 		"Chrome > 0 and last 2.5 years",
@@ -20,18 +23,28 @@
 		"not dead"
 	],
 	"scripts": {
-		"start": "eleventy --config=.eleventy/eleventy.config.js --serve",
-		"build:config": "node src/scripts/build_conf.js",
-		"dev": "pnpm run build:config && eleventy --config=.eleventy/eleventy.config.js --watch",
-		"build": "pnpm run build:config && eleventy --config=.eleventy/eleventy.config.js",
-		"clean": "rimraf dist/",
-		"format": "prettier --write ."
+		"start": "eleventy --serve",
+		"dev": "eleventy --serve --watch",
+		"build": "eleventy",
+		"clean": "rimraf _site/",
+		"format": "prettier . --write"
 	},
-	"dependencies": {
-		"@11ty/eleventy": "^3.0.0"
+	"prettier": {
+		"plugins": [
+			"@shopify/prettier-plugin-liquid"
+		],
+		"useTabs": true,
+		"tabWidth": 4,
+		"singleQuote": false,
+		"bracketSpacing": true
 	},
 	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@shopify/prettier-plugin-liquid": "^1.9.0",
+		"@types/node": "^22.14.0",
+		"esbuild": "^0.25.2",
 		"prettier": "^3.5.3",
-		"rimraf": "^6.0.1"
+		"rimraf": "^6.0.1",
+		"typescript": "^5.8.3"
 	}
 }
