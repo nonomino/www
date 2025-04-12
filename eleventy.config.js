@@ -1,30 +1,18 @@
-import EleventyConfig from "@11ty/eleventy";
-import esbuild from "esbuild";
-import path from "path";
+import * as shortcodes from './utils/shortcodes.js';
+
+Error.stackTraceLimit = 100;
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("assets");
-	eleventyConfig.configureErrorReporting({ allowMissingExtensions: true });
-	eleventyConfig.addWatchTarget("./src/ts/");
-
-	eleventyConfig.on("eleventy.before", async () => {
-		console.log("Building JS with esbuild...");
-		await esbuild
-			.build({
-				entryPoints: ["src/scripts/index.ts"],
-				bundle: true,
-				outfile: "_site/assets/js/index.js",
-				minify: true,
-				target: "esnext",
-				format: "iife",
-				logLevel: "info",
-			})
-			.catch((error) => {
-				console.error("esbuild failed:", error);
-				process.exit(1);
-			});
-		console.log("esbuild finished.");
+	eleventyConfig.configureErrorReporting({
+		allowMissingExtensions: true
 	});
+	eleventyConfig.addWatchTarget("./src/scripts/");
+	eleventyConfig.addWatchTarget("./src/styles/");
+
+	Object.keys(shortcodes).forEach((name) => {
+		eleventyConfig.addShortcode(name, shortcodes[name])
+	})
 
 	return {
 		dir: {
