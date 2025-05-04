@@ -1,3 +1,4 @@
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import * as shortcodes from './utils/shortcodes.js';
 
 Error.stackTraceLimit = 100;
