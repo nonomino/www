@@ -1,0 +1,28 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+	"type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"build": "pnpm vite build",
+		"dev": "pnpm eleventy && pnpm vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.1",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "autoprefixer": "^10.4.21",
+    "barba.js": "^1.0.0",
+    "gsap": "^3.13.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11"
+  }
+}

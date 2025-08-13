@@ -1,5 +1,6 @@
 _asset_bundler_cache
 _site
+dist
 .bundle
 .DS_Store
 .jekyll-cache

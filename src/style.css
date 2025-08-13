@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #282828;
+  --fg: #ebdbb2;
+}
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Roboto Mono', monospace;
+}
+
