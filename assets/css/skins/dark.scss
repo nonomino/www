@@ -2,7 +2,7 @@
 ---
 
 @use "sass:color";
-@use "so-simple/functions";
+@use "so-simple/functions" as *;
 @use "so-simple/variables";
 @use "so-simple/notices";
 @use "so-simple/mixins";

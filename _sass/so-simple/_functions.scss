@@ -1,4 +1,4 @@
-@use "functions/color";
-@use "functions/em";
-@use "functions/fluid-type";
-@use "functions/yiq";
+@forward "functions/color";
+@forward "functions/em";
+@forward "functions/fluid-type";
+@forward "functions/yiq";
