@@ -1,4 +1,7 @@
 @use "sass:color";
+@use "functions" as *;
+@use "variables" as *;
+
 /**
  *  Default Kramdown usage (no indents!):
  *  <div class="notice" markdown="1">

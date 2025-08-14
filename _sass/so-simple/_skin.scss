@@ -2,8 +2,44 @@
    Base elements
    ========================================================================== */
 
-
 @use "sass:color";
+@use "functions" as *;
+@use "variables" as *;
+@use "notices" as *;
+
+/* Colors */
+$base-color: #000 !default;
+$text-color: #000 !default;
+$accent-color: #34374C !default;
+$nav-color: #fff !default;
+$background-color: #fff !default;
+$nav-background-color: #000 !default;
+$code-background-color: tint($base-color, 95%) !default;
+$border-color: tint($base-color, 80%) !default;
+
+$primary-color: #000 !default;
+$success-color: #62c462 !default;
+$warning-color: #f89406 !default;
+$danger-color: #ee5f5b !default;
+$info-color: #52adc8 !default;
+
+/* Syntax highlighting (base16) colors */
+$base00: #fafafa !default;
+$base01: #073642 !default;
+$base02: #586e75 !default;
+$base03: #657b83 !default;
+$base04: #839496 !default;
+$base05: #586e75 !default;
+$base06: #eee8d5 !default;
+$base07: #fdf6e3 !default;
+$base08: #dc322f !default;
+$base09: #cb4b16 !default;
+$base0a: #b58900 !default;
+$base0b: #859900 !default;
+$base0c: #2aa198 !default;
+$base0d: #268bd2 !default;
+$base0e: #6c71c4 !default;
+$base0f: #d33682 !default;
 
 body {
   color: $text-color;
@@ -98,7 +134,7 @@ blockquote {
 }
 
 .toc-wrapper {
-  border-color: mix(#fff, $border-color, 25%);
+  border-color: color.mix(#fff, $border-color, 25%);
 
   h2 {
     color: $base05;
@@ -134,12 +170,12 @@ blockquote {
 .pagination {
   li {
     a {
-      color: mix($text-color, $border-color, 50%);
+      color: color.mix($text-color, $border-color, 50%);
       border-color: $border-color;
 
       &.current,
       &.current.disabled {
-        @include yiq-contrasted(mix($text-color, $border-color, 50%));
+        @include yiq-contrasted(color.mix($text-color, $border-color, 50%));
       }
 
       &.disabled {
@@ -195,32 +231,32 @@ td {
 
 /* Accent notice */
 .notice--accent {
-  @include notice(mix(#fff, $accent-color, 70%));
+  @include notice(color.mix(#fff, $accent-color, 70%));
 }
 
 /* Primary notice */
 .notice--primary {
-  @include notice(mix(#fff, $primary-color, 70%));
+  @include notice(color.mix(#fff, $primary-color, 70%));
 }
 
 /* Warning notice */
 .notice--warning {
-  @include notice(mix(#fff, $warning-color, 70%));
+  @include notice(color.mix(#fff, $warning-color, 70%));
 }
 
 /* Success notice */
 .notice--success {
-  @include notice(mix(#fff, $success-color, 70%));
+  @include notice(color.mix(#fff, $success-color, 70%));
 }
 
 /* Danger notice */
 .notice--danger {
-  @include notice(mix(#fff, $danger-color, 70%));
+  @include notice(color.mix(#fff, $danger-color, 70%));
 }
 
 /* Info notice */
 .notice--info {
-  @include notice(mix(#fff, $info-color, 70%));
+  @include notice(color.mix(#fff, $info-color, 70%));
 }
 
 /* ==========================================================================
@@ -258,7 +294,7 @@ td {
       }
 
       &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
+        @include yiq-contrasted(color.mix(#000, $color, 20%));
       }
 
       &:visited {

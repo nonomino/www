@@ -8,6 +8,7 @@
 
 /* Document
    ========================================================================== */
+@use "variables" as *;
 
 html {
   font-family: $base-font-family; /* 1 */

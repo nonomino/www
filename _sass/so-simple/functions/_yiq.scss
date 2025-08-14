@@ -1,6 +1,7 @@
 /*
    https://github.com/easy-designs/yiq-color-contrast
 */
+@use "../variables" as *;
 @use "sass:color";
 
    @function yiq-is-light(

@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@use "functions" as *;
+@use "variables" as *;
+
 @font-face {
   font-family: "Comfortaa";
   src: url("fonts/comfortaa-latin.woff2") format('woff2');

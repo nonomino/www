@@ -9,7 +9,6 @@
 @use "so-simple/variables";
 @use "so-simple/mixins";
 @use "so-simple/vendor/breakpoint/breakpoint";
-@include breakpoint-set("to ems", true);
 
 /* Core Styles */
 @use "so-simple/reset";
@@ -28,3 +27,4 @@
 
 /* Utility Clases */
 @use "so-simple/utilities";
+@include breakpoint-set("to ems", true);
