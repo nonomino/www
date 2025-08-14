@@ -8,7 +8,8 @@
 @use "so-simple/functions";
 @use "so-simple/variables";
 @use "so-simple/mixins";
-@use "so-simple/vendor/breakpoint/breakpoint";
+@use "so-simple/vendor/breakpoint/breakpoint" as *;
+@use "so-simple/vendor/breakpoint/settings" as *;
 
 /* Core Styles */
 @use "so-simple/reset";
@@ -27,4 +28,3 @@
 
 /* Utility Clases */
 @use "so-simple/utilities";
-@include breakpoint-set("to ems", true);

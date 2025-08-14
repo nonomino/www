@@ -1,3 +1,8 @@
+@use "functions" as *;
+@use "variables" as *;
+@use "vendor/breakpoint/breakpoint" as *;
+@use "mixins/clearfix" as *;
+
 .page-wrapper {
   margin: 0 auto;
   padding-left: 1em;

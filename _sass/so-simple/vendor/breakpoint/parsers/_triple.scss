@@ -3,7 +3,7 @@
 //////////////////////////////
 // Import Pieces
 //////////////////////////////
-@import "triple/default";
+@use "triple/default";
 
 @function breakpoint-parse-triple($feature, $empty-media, $first) {
   $parsed: '';

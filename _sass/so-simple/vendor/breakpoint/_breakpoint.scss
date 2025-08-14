@@ -43,9 +43,9 @@ $breakpoint: () !default;
   @include legacy-settings-warning;
 
   // Reset contexts
-  @include private-breakpoint-reset-contexts();
+  @include context.private-breakpoint-reset-contexts();
 
-  $breakpoint: breakpoint($query, false);
+  $breakpoint: parsers.breakpoint($query, false);
 
   $query-string: map.get($breakpoint, 'query');
   $query-fallback: map.get($breakpoint, 'fallback');
@@ -105,7 +105,7 @@ $breakpoint: () !default;
     }
   }
 
-  @include private-breakpoint-reset-contexts();
+  @include context.private-breakpoint-reset-contexts();
 }
 
 

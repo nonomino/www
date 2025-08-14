@@ -1,5 +1,6 @@
 @use "functions" as *;
 @use "variables" as *;
+@use "mixins/clearfix" as *;
 @use "vendor/breakpoint/breakpoint" as *;
 
 ::-moz-selection {
