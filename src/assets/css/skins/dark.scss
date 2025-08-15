@@ -7,7 +7,7 @@
 @use "so-simple/notices" as *;
 @use "so-simple/mixins" as *;
 
-@use "so-simple/skin" with (
+@use "so-simple/skin" with(
 	/* Colors */
 	$base-color: #EAEAEA,
 	$text-color: #EAEAEA,
@@ -23,7 +23,8 @@
 	$warning-color: rgb(255, 214, 10),
 	$danger-color: rgb(255, 69, 58),
 	$info-color: #00adb5,
-	
+
+	/* Syntax highlighting (base16) colors */
 	$base00: #263238,
 	$base01: #2e3c43,
 	$base02: #314549,

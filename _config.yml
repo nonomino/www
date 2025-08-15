@@ -2,6 +2,10 @@ skin: "/assets/css/skins/light.css"
 locale: en-US
 title: "nonomino"
 description: "This site may or may not guide you to life, the universe and everything."
+source: src
+layouts_dir: layouts
+data_dir: data
+includes_dir: includes
 baseurl:
 url: "https://nonomino.is-a.dev"
 logo: /assets/images/avatar.jpg
@@ -22,7 +26,7 @@ author:
 
 sass:
   style: compressed
-  sass_dir: _sass
+  sass_dir: sass
   sourcemap: never
 
 liquid:
