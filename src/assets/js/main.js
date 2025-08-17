@@ -5,7 +5,7 @@ function setTheme(theme, baseurl, themeStyleLink, themeIcon) {
 		document.body.setAttribute('data-theme', 'dark');
 	} else {
 		themeStyleLink.setAttribute('href', `${baseurl}/assets/css/skins/light.css`);
-		themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+		themeIcon.innerHTML = '<path style="stroke:#9d0006" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
 		document.body.setAttribute('data-theme', 'light');
 	}
 	localStorage.setItem('theme', theme);
