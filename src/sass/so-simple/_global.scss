@@ -159,7 +159,6 @@
     margin: 2em 0;
     padding: 2em 0;
     text-align: center;
-    border-top: 1px solid;
   }
 
   .social-icons {
@@ -391,5 +390,29 @@
       padding-left: 0.5rem;
       list-style-type: lower-roman;
     }
+  }
+}
+
+.sep {
+  border: 0;
+  height: 1.7rem;
+  margin: 2rem 0;
+  position: relative;
+  opacity: 0.88;
+
+  &--fleuron::after {
+    content: "< />";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .sep {
+    margin: 1.5rem 0;
   }
 }

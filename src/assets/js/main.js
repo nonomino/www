@@ -14,7 +14,7 @@ function setTheme(theme, baseurl, themeStyleLink, themeIcon) {
 function encryptText(text) {
 	const shift = 3;
 	return text.replace(/[a-zA-Z]/g, (char) => {
-		const base = char <= 'Z' ? 65 : 97;
+		const base = char <= 'Z' ? 65: 97;
 		return String.fromCharCode(((char.charCodeAt(0) - base + shift) % 26) + base);
 	});
 }
@@ -66,21 +66,16 @@ function handleSearch(searchField) {
 
 function handleNavbarScroll(navbar, currentPageElement, hasCurrentPage) {
 	let lastScrollY = window.scrollY;
-	
 	const updateNavbar = () => {
 		const scrollY = window.scrollY;
 		const scrollThreshold = 100;
-		
 		if (scrollY > scrollThreshold) {
 			navbar.classList.add('scrolled');
 		} else {
 			navbar.classList.remove('scrolled');
 		}
-		
 		lastScrollY = scrollY;
 	};
-	
-	// Throttle scroll events
 	let ticking = false;
 	window.addEventListener('scroll', () => {
 		if (!ticking) {
@@ -91,17 +86,14 @@ function handleNavbarScroll(navbar, currentPageElement, hasCurrentPage) {
 			ticking = true;
 		}
 	});
-	
 	updateNavbar();
 }
 
 function getCurrentPageName() {
 	const path = window.location.pathname;
-
-	const cleanPath = path.replace(/^\/+|\/+$/g, '');
-
+	const cleanPath = path.replace(/^\/+|\/+$/g,
+		'');
 	if (!cleanPath) return null;
-
 	const pageNames = {
 		'me': 'about me',
 		'portfolio': 'portfolio',
@@ -109,11 +101,9 @@ function getCurrentPageName() {
 		'now': 'now',
 		'uses': 'uses'
 	};
-
 	if (cleanPath.includes('blog/') && cleanPath !== 'blog') {
 		return 'blog post';
 	}
-	
 	return pageNames[cleanPath] || cleanPath;
 }
 
@@ -123,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const themeStyleLink = document.getElementById('theme-style');
 	const themeIcon = document.getElementById('theme-icon');
 	const themeSound = document.getElementById('theme-sound');
-	const baseurl = themeToggleBtn ? themeToggleBtn.getAttribute('data-baseurl') : '';
+	const baseurl = themeToggleBtn ? themeToggleBtn.getAttribute('data-baseurl'): '';
 	const menuToggleButton = document.getElementById("menu-toggle");
 	const menu = document.getElementById("primary-nav");
 	const paragraph = document.getElementById('greeting');
@@ -135,14 +125,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	const currentPageElement = document.getElementById('currentPage');
 	const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 	const mobileDropdown = document.getElementById('mobileDropdown');
+
+	// --- Modal search elements ---
 	const searchToggle = document.getElementById('searchToggle');
-	const searchInput = document.getElementById('searchInput');
+	const searchModalBg = document.getElementById('searchModalBg');
+	const searchInputModal = document.getElementById('searchInputModal');
 	const searchField = document.getElementById('searchField');
 	const searchClose = document.getElementById('searchClose');
+	const searchResults = document.getElementById('searchResults');
+	// ----------------------------
 
 	if (navbar && currentPageElement) {
 		const pageName = getCurrentPageName();
-
 		if (pageName) {
 			currentPageElement.textContent = pageName;
 			handleNavbarScroll(navbar, currentPageElement, true);
@@ -161,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (themeToggleBtn && themeStyleLink && themeIcon) {
 		themeToggleBtn.addEventListener('click', function() {
 			const currentTheme = localStorage.getItem('theme') || 'light';
-			const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+			const newTheme = currentTheme === 'light' ? 'dark': 'light';
 			setTheme(newTheme, baseurl, themeStyleLink, themeIcon);
 			if (themeSound) {
 				themeSound.play().catch(error => {
@@ -177,47 +171,88 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 
-	if (searchToggle && searchInput) {
-		searchToggle.addEventListener('click', function(event) {
-			toggleSearch(event, searchInput);
-		});
+	// --- Modal Search Logic ---
+	function openSearchModal() {
+		if (searchModalBg) searchModalBg.classList.add('active');
+		if (searchInputModal) searchInputModal.classList.add('show');
+		document.body.style.overflow = 'hidden';
+		if (searchField) searchField.focus();
 	}
-
-	if (searchClose && searchInput) {
-		searchClose.addEventListener('click', function() {
-			searchInput.classList.remove('show');
-		});
+	function closeSearchModal() {
+		if (searchModalBg) searchModalBg.classList.remove('active');
+		if (searchInputModal) searchInputModal.classList.remove('show');
+		document.body.style.overflow = '';
+		if (searchField) searchField.value = '';
+		if (searchResults) searchResults.innerHTML = '';
 	}
-
-	if (searchField) {
-		searchField.addEventListener('keypress', function(event) {
-			handleSearch(this);
-		});
+	if (searchToggle) {
+		searchToggle.addEventListener('click', openSearchModal);
 	}
-
-	document.addEventListener('click', function(e) {
-		if (mobileDropdown && !mobileMenuToggle.contains(e.target) && !mobileDropdown.contains(e.target)) {
-			mobileDropdown.classList.remove('show');
-		}
-		if (searchInput && !searchToggle.contains(e.target) && !searchInput.contains(e.target)) {
-			searchInput.classList.remove('show');
-		}
-	});
-
-	document.addEventListener('selectionchange', () => {
-		const selection = window.getSelection();
-		if (selection.rangeCount > 0) {
-			const selectedText = selection.toString();
+	if (searchClose) {
+		searchClose.addEventListener('click', closeSearchModal);
+	}
+	if (searchModalBg) {
+		searchModalBg.addEventListener('click', closeSearchModal);
+	}
+	document.addEventListener('keydown', function(e) {
+		if (searchInputModal && searchInputModal.classList.contains('show') && e.key === 'Escape') {
+			closeSearchModal();
 		}
 	});
+	// Clicking outside modal closes it
+	document.addEventListener('click',
+		function(e) {
+			if (
+				searchInputModal && searchInputModal.classList.contains('show') &&
+				!searchInputModal.contains(e.target) &&
+				!(e.target === searchToggle || searchToggle.contains(e.target))
+			) {
+				closeSearchModal();
+			}
+			// mobile dropdown logic
+			if (mobileDropdown && mobileMenuToggle &&
+				!mobileMenuToggle.contains(e.target) && !mobileDropdown.contains(e.target)) {
+				mobileDropdown.classList.remove('show');
+			}
+		});
 
-	document.addEventListener('beforecopy', handleCopyEvent);
-	document.addEventListener('copy', handleCopyEvent);
+	// Search results placeholder
+	if (searchField && searchResults) {
+		searchField.addEventListener('input', function() {
+			const query = searchField.value.trim();
+			if (query.length > 0) {
+				searchResults.innerHTML = '<em>Searching for: ' + query + '</em>';
+			} else {
+				searchResults.innerHTML = '';
+			}
+		});
+		// Optional: handle 'Enter' for search page
+		searchField.addEventListener('keypress',
+			function(event) {
+				if (event.key === 'Enter') {
+					window.location.href = `/search?q=${encodeURIComponent(searchField.value.trim())}`;
+				}
+			});
+	}
+	// -------------------------------
+
+	document.addEventListener('selectionchange',
+		() => {
+			const selection = window.getSelection();
+			if (selection.rangeCount > 0) {
+				const selectedText = selection.toString();
+			}
+		});
+
+	document.addEventListener('beforecopy',
+		handleCopyEvent);
+	document.addEventListener('copy',
+		handleCopyEvent);
 
 	if (themeStyleLink && themeIcon) {
 		setTheme(savedTheme, baseurl, themeStyleLink, themeIcon);
 	}
-	
+
 	if (paragraph) {
 		updateGreeting();
 		setInterval(updateGreeting, 2500);

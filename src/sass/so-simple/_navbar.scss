@@ -6,6 +6,7 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  z-index: 990;
 
   // Scrolled state
   &.scrolled {
@@ -171,13 +172,13 @@
     top: calc(100% + 0.5rem);
     right: 0;
     border: 2px solid;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 0.625rem;
-    min-width: 200px;
+    min-width: 175px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     z-index: 50;
 
     &.show {
@@ -245,4 +246,73 @@
   .desktop-nav {
     display: none;
   }
+}
+
+/* Modal-style search overlay */
+.search-modal-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 987;
+  backdrop-filter: blur(8px);
+  transition: opacity .2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-modal-bg.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Centered search input */
+.search-input-modal {
+  position: fixed;
+  top: 80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 988;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.13);
+  width: 90vw;
+  max-width: 480px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .22s, visibility .22s;
+}
+
+.search-input-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-input-modal input {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #e8b4b4;
+  font-size: 1.15rem;
+  background: #f5f2e8;
+  outline: none;
+}
+
+.search-input-modal .search-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: -2rem;
+  margin-right: -1.5rem;
+}
+
+/* Space for results */
+.search-modal-results {
+  min-height: 80px;
+  margin-top: 0.25rem;
 }

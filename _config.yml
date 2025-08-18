@@ -1,13 +1,13 @@
 skin: "/assets/css/skins/light.css"
 locale: en-US
-title: "nonomino"
+title: "*saahil"
 description: "This site may or may not guide you to life, the universe and everything."
 source: src
 layouts_dir: layouts
 data_dir: data
 includes_dir: includes
 baseurl:
-url: "https://nonomino.is-a.dev"
+url: "https://ptrto.me/"
 logo: /assets/images/avatar.jpg
 date_format: "%B %-d, %Y"
 sitemap: true

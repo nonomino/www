@@ -28,6 +28,9 @@ $navbar-scrolled-bg: rgba(249, 214, 210, 1) !default;
 $shadow-light: rgba(0, 0, 0, 0.1) !default;
 $border-transparent: transparent !default;
 $text-white: white !default;
+$modal-bg: rgba(40, 40, 40, 0.6) !default;
+$modal-backdrop: rgba(40,40,40, 0.2) !default;
+$modal-text-input: rgba(1,1,1,0.1) !default;
 
 /* Syntax highlighting (base16) colors */
 $base00: #fafafa !default;
@@ -745,4 +748,31 @@ figure.highlight {
       }
     }
   }
+}
+
+.search-input-modal {
+  background: $modal-bg;
+  border: 2px solid $brand-primary-hover;
+}
+
+.search-modal-bg {
+  background: $modal-backdrop;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $accent-color;
+}
+
+.sep {
+	  background:
+    linear-gradient($accent-color, $accent-color) left 50% / 42% 1px no-repeat,
+    linear-gradient($accent-color, $accent-color) right 50% / 42% 1px no-repeat;
+    &--fleuron::after {
+    	    color: $accent-color;
+    }
 }
