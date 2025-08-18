@@ -12,9 +12,7 @@
 	$base-color: #EAEAEA,
 	$text-color: #EAEAEA,
 	$accent-color: #FB4934,
-	$nav-color: #FBF1C7,
 	$background-color: #282828,
-	$nav-background-color: #2C3836,
 	$code-background-color: color.mix(#000, #282828, 15%),
 	$border-color: #EAEAEA,
 	
@@ -23,6 +21,14 @@
 	$warning-color: rgb(255, 214, 10),
 	$danger-color: rgb(255, 69, 58),
 	$info-color: #00adb5,
+
+	$brand-primary: #d65d0e,
+	$brand-primary-hover: #c0392b,
+	$brand-bg-light: rgba(231, 76, 60, 0.1),
+	$navbar-scrolled-bg: rgba(249, 214, 210, 1),
+	$shadow-light: rgba(0, 0, 0, 0.1),
+	$border-transparent: transparent,
+	$text-white: white,
 
 	/* Syntax highlighting (base16) colors */
 	$base00: #263238,

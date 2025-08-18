@@ -12,18 +12,24 @@
 	$base-color: #282828,
 	$text-color: #282828,
 	$accent-color: #9D0006,
-	$nav-color: #FBF1C7,
 	$background-color: #fff,
-	$nav-background-color: #2C3836,
 	$code-background-color: tint(#282828, 95%),
 	$border-color: tint(#282828, 80%),
-	
+
 	$primary-color: #fff,
 	$success-color: #34c759,
 	$warning-color: #ffcc00,
 	$danger-color: #ff3b30,
 	$info-color: #5ac8fa,
-	
+
+	$brand-primary: #d65d0e,
+	$brand-primary-hover: #c0392b,
+	$brand-bg-light: rgba(231, 76, 60, 0.1),
+	$navbar-scrolled-bg: rgba(249, 214, 210, 1),
+	$shadow-light: rgba(0, 0, 0, 0.1),
+	$border-transparent: transparent,
+	$text-white: white,
+
 	/* Syntax highlighting (base16) colors */
 	$base00: #fafafa,
 	$base01: #073642,

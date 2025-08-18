@@ -11,9 +11,7 @@
 $base-color: #000 !default;
 $text-color: #000 !default;
 $accent-color: #34374C !default;
-$nav-color: #fff !default;
 $background-color: #fff !default;
-$nav-background-color: #000 !default;
 $code-background-color: tint($base-color, 95%) !default;
 $border-color: tint($base-color, 80%) !default;
 
@@ -22,6 +20,14 @@ $success-color: #62c462 !default;
 $warning-color: #f89406 !default;
 $danger-color: #ee5f5b !default;
 $info-color: #52adc8 !default;
+
+$brand-primary: #d65d0e !default;
+$brand-primary-hover: #c0392b !default;
+$brand-bg-light: rgba(231, 76, 60, 0.1) !default;
+$navbar-scrolled-bg: rgba(249, 214, 210, 1) !default;
+$shadow-light: rgba(0, 0, 0, 0.1) !default;
+$border-transparent: transparent !default;
+$text-white: white !default;
 
 /* Syntax highlighting (base16) colors */
 $base00: #fafafa !default;
@@ -44,7 +50,6 @@ $base0f: #d33682 !default;
 body {
   color: $text-color;
   background: $background-color;
-  border-top-color: $nav-background-color;
 }
 
 a {
@@ -105,22 +110,6 @@ blockquote {
   color: color.adjust($text-color, $lightness: 25%)
 }
 
-.site-nav {
-  ul {
-    color: $nav-color;
-    background-color: $nav-background-color;
-  }
-
-  a {
-    color: $nav-color;
-    border-color: $nav-background-color;
-
-    &:hover {
-      border-color: $nav-color;
-    }
-  }
-}
-
 .site-footer {
   border-top-color: $border-color;
 }
@@ -153,14 +142,6 @@ blockquote {
       }
     }
   }
-}
-
-#menu-toggle {
-  color: $nav-color;
-}
-
-#menu-toggle {
-  background-color: $nav-background-color;
 }
 
 #markdown-toc {
@@ -587,5 +568,181 @@ figure.highlight {
   .il {
     /* Literal.Number.Integer.Long */
     color: $base09;
+  }
+}
+
+.navbar {
+  // Scrolled state colors
+  &.scrolled {
+    background: $navbar-scrolled-bg;
+    box-shadow: 0 2px 8px $shadow-light;
+
+    .navbar-row {
+      background: $brand-bg-light;
+    }
+
+    .navbar-brand {
+      background: $brand-primary;
+      color: $text-white;
+    }
+  }
+
+  // Main navbar row colors
+  .navbar-row {
+    background: $brand-bg-light;
+  }
+
+  // Brand colors
+  .navbar-brand {
+    background: $brand-primary;
+    color: $text-white;
+
+    &:hover {
+      background: $brand-primary-hover;
+      color: $text-white;
+    }
+  }
+
+  // Current page indicator colors
+  .current-page {
+    color: $brand-primary;
+  }
+
+  // Button colors
+  .nav-button {
+    border-color: $border-transparent;
+    border-radius: 8px;
+    background: $border-transparent;
+    color: $brand-primary;
+
+    svg {
+      stroke: currentColor;
+      fill: none;
+
+      path {
+        stroke: currentColor;
+      }
+    }
+
+    &:hover {
+      border-color: $brand-primary;
+      background: $brand-bg-light;
+    }
+  }
+
+  // Search input colors
+  .search-input {
+    background: $text-white;
+    border-color: $brand-primary;
+
+    .search-close {
+      color: $brand-primary;
+    }
+  }
+
+  // Mobile dropdown colors
+  .mobile-dropdown {
+    background: $text-white;
+    border-color: $brand-primary;
+
+    .mobile-nav {
+      .nav-item {
+        .nav-link {
+          color: $brand-primary;
+
+          &:hover {
+            background-color: $brand-bg-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop navigation colors
+.desktop-nav {
+  .nav-links {
+    .nav-link {
+      color: $brand-primary;
+
+      &:hover {
+        color: $brand-primary-hover;
+      }
+    }
+  }
+}
+
+// Dark theme color overrides
+[data-theme="dark"] {
+  .navbar {
+    &.scrolled {
+      background: color.mix(#000, $background-color, 20%);
+    }
+
+    .current-page {
+      color: $accent-color;
+    }
+
+    .navbar-row {
+      background: color.mix($accent-color, $background-color, 10%);
+    }
+
+    .navbar-brand {
+      background: $accent-color;
+      color: $base-color;
+
+      &:hover {
+        background: color.adjust($accent-color, $lightness: -10%);
+        color: $base-color;
+      }
+    }
+
+    .nav-button {
+      color: $accent-color;
+
+      &:hover {
+        border-color: $accent-color;
+        background: color.mix($accent-color, $background-color, 10%);
+      }
+    }
+
+    .search-input {
+      background: $background-color;
+      border-color: $accent-color;
+      color: $text-color;
+
+      .search-close {
+        color: $accent-color;
+      }
+    }
+
+    .mobile-dropdown {
+      background: $background-color;
+      border-color: $accent-color;
+
+      .mobile-nav {
+        .nav-item {
+          .nav-link {
+            color: $accent-color;
+
+            &:hover {
+              background-color: color.mix($accent-color, $background-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .desktop-nav {
+    .nav-links {
+      .nav-link {
+        color: $accent-color;
+
+        &:hover {
+          color: color.adjust($accent-color, $lightness: -10%);
+        }
+      }
+    }
   }
 }
