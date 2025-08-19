@@ -768,6 +768,13 @@ h6 {
 	color: $accent-color;
 }
 
+h1.home-head,
+h2.home-head {
+	&::after {
+	  background-color: $accent-color;
+	}
+}
+
 .sep {
 	  background:
     linear-gradient($accent-color, $accent-color) left 50% / 42% 1px no-repeat,

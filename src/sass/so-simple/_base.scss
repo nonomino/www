@@ -10,6 +10,11 @@
 	src: url("fonts/comfortaa-latin.woff2") format('woff2');
 }
 
+@font-face {
+	font-family: "Just Another Hand";
+	src: url("fonts/jah.woff2") format('woff2');
+}
+
 html {
 	scroll-behavior: smooth;
 	@include fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size);

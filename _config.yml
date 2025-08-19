@@ -1,7 +1,6 @@
 skin: "/assets/css/skins/light.css"
 locale: en-US
 title: "*saahil"
-description: "This site may or may not guide you to life, the universe and everything."
 source: src
 layouts_dir: layouts
 data_dir: data

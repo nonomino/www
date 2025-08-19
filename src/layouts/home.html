@@ -10,10 +10,10 @@ layout: page-head
       Add paginator.posts loop if jekyll-paginate plugin is enabled
       and page.paginate == true
     {%- endcomment -%}
-    <h2># Recent posts</h2>
+    <h2 class="home-head"># Recent posts</h2>
     {% include posts-paginated.html %}
   {%- else -%}
-    <h1>Recent posts</h1>
+    <h1 class="home-head"># Recent posts</h1>
     {% include posts-limit.html %}
   {%- endif -%}
 </div>

@@ -17,7 +17,7 @@ class JK < Thor
     say "livereload.js: http://localhost:35729"
 
     begin
-      pid = Process.spawn("bundle exec jekyll serve --livereload --watch --quiet")
+      pid = Process.spawn("bundle exec jekyll serve --livereload --watch")
       File.write('jekyll.pid', pid)
       Process.wait(pid)
     rescue Interrupt

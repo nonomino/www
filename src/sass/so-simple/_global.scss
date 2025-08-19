@@ -115,12 +115,26 @@
 }
 
 .site-description {
-  margin-bottom: 1em;
-  font-family: $description-font-family;
+  margin-bottom: 0.5em;
+  font-family: "Just Another Hand";
   @include fluid-type($min-vw, $max-vw, $h5-min, $h5-max);
 
   & {
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 28px;
+    font-style: italic;
+  }
+}
+
+.site-description-footer {
+  text-align: right;
+  margin-right: 3em;
+  font-family: "Just Another Hand";
+  @include fluid-type($min-vw, $max-vw, $h5-min, $h5-max);
+
+  & {
+    font-weight: 100;
+    font-size: 28px;
     font-style: italic;
   }
 }
@@ -414,5 +428,21 @@
 @media (max-width: 600px) {
   .sep {
     margin: 1.5rem 0;
+  }
+}
+
+h1.home-head,
+h2.home-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    flex: 1;
+    margin-left: 0.75rem;
+    height: 1px;
+    opacity: 0.6;
   }
 }
